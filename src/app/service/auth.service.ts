@@ -22,6 +22,8 @@ export class AuthService {
   }
 
   public logout(): void {
+
+    sessionStorage.setItem('menuTree', null);//避免切換 user 選單不一致
     // 本地消除存储用户信息
     localStorage.clear();
     // 通知服务器用户下线
